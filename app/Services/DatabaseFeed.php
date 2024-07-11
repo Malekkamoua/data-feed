@@ -32,6 +32,17 @@ class DatabaseFeed
                 }
             }
 
+            // Define the directory and file name
+            $directory = storage_path('app\public\sql_files');
+            $fileName = 'database_feed.sql';
+            $filePath = $directory . '/' . $fileName;
+
+            // Check if the directory exists, if not, create it
+            if (!File::exists($directory)) {
+                File::makeDirectory($directory, 0755, true);
+            }
+            $requests = [];
+
             foreach ($itemsData as $index => $item) {
 
                 $keys = ['id'];
@@ -58,32 +69,37 @@ class DatabaseFeed
                 $valsString = "( " . $vals . " )";
 
                 $sql = "INSERT INTO " . $item['parentTagName'] . $colsString . " VALUES " . $valsString;
-                echo $sql;
+                //echo $sql;
+                $requests[] = $sql;
 
-                // Define the directory and file name
-                $directory = storage_path('app\public\sql_files');
-                $fileName = 'database_feed.sql';
-                $filePath = $directory . '/' . $fileName;
-
-                // Check if the directory exists, if not, create it
-                if (!File::exists($directory)) {
-                    File::makeDirectory($directory, 0755, true);
-                }
-                File::put($filePath, $sql);
-                echo "Database feed file created successfully at " . $filePath . PHP_EOL;
-
-                // Execute the SQL script
-                try {
-                    DB::unprepared($sql);
-                    echo 'Table feed executed successfully.' . PHP_EOL;
-                } catch (Exception $e) {
-                    echo 'Error executing SQL script.' . PHP_EOL;
-                    Log::error("Error executing SQL script: {$e->getMessage()}");
-                }
             }
 
+            $sqlContent = implode(";\n", $requests) . ";";
+            File::put($filePath, $sqlContent);
+
+            echo "Database feed file created successfully at " . $filePath . PHP_EOL;
+
+            // Execute the SQL script
+            try {
+
+                foreach ($requests as $statement) {
+                    $trimmedStatement = trim($statement);
+                    if (!empty($trimmedStatement)) {
+                        DB::unprepared($trimmedStatement . ';');
+                    }
+                }
+
+                echo 'Table creations executed successfully.' . PHP_EOL;
+
+            } catch (Exception $e) {
+                echo 'Error executing SQL script.' . PHP_EOL;
+                Log::error("Error executing SQL script: {$e->getMessage()}");
+            }
+
+
         } catch (Exception $e) {
-            echo "Error: " . $e->getMessage();
+            echo "Error: " . $e;
+            Log::error("Error: {$e}");
         }
     }
     function parseXmlElement($element, $parentTagName = null)

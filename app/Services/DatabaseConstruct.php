@@ -23,6 +23,8 @@ class DatabaseConstruct
                 $sql .= $child . " varchar(255)";
                 if ($index < $childCount - 1) {
                     $sql .= ", ";
+                } else {
+                    $sql .= ") ";
                 }
             }
             $requests[] = $sql;
@@ -34,18 +36,25 @@ class DatabaseConstruct
         $directory = storage_path('app\public\sql_files');
         $fileName = 'database_schema.sql';
         $filePath = $directory . '/' . $fileName;
-
-        // Check if the directory exists, if not, create it
         if (!File::exists($directory)) {
             File::makeDirectory($directory, 0755, true);
         }
+
         File::put($filePath, $sqlContent);
         echo "Database file created successfully at " . $filePath . PHP_EOL;
 
         // Execute the SQL script
         try {
-            DB::unprepared($sql);
+
+            foreach ($requests as $statement) {
+                $trimmedStatement = trim($statement);
+                if (!empty($trimmedStatement)) {
+                    DB::unprepared($trimmedStatement . ';');
+                }
+            }
+
             echo 'Table creations executed successfully.' . PHP_EOL;
+
         } catch (Exception $e) {
             echo 'Error executing SQL script.' . PHP_EOL;
             Log::error("Error executing SQL script: {$e->getMessage()}");
