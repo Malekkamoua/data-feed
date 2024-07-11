@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\File;
@@ -15,7 +16,7 @@ class DatabaseConstruct
         $requests = [];
         foreach ($tagNames as $tagName => $children) {
 
-            $sql = "CREATE TABLE IF NOT EXISTS " . $tagName . " ( ";
+            $sql = "CREATE TABLE IF NOT EXISTS " . $tagName . " ( id CHAR(8) PRIMARY KEY ,";
             $childCount = count($children);
 
             foreach ($children as $index => $child) {
@@ -24,8 +25,6 @@ class DatabaseConstruct
                     $sql .= ", ";
                 }
             }
-
-            $sql .= ", id CHAR(36) PRIMARY KEY)";
             $requests[] = $sql;
         }
 
@@ -46,14 +45,12 @@ class DatabaseConstruct
         // Execute the SQL script
         try {
             DB::unprepared($sql);
-            echo 'SQL script executed successfully.';
-        } catch (\Exception $e) {
-            echo 'Error executing SQL script.';
+            echo 'Table creations executed successfully.' . PHP_EOL;
+        } catch (Exception $e) {
+            echo 'Error executing SQL script.' . PHP_EOL;
             Log::error("Error executing SQL script: {$e->getMessage()}");
         }
 
-
-        return response()->json(['message' => 'File created successfully!', 'file' => $filePath]);
     }
 
 }

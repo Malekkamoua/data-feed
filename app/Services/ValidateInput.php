@@ -10,10 +10,7 @@ class ValidateInput
     {
         if (!file_exists($filePath)) {
             Log::error("File not found: $filePath");
-            return [
-                'status' => false,
-                'message' => "File not found: $filePath"
-            ];
+            echo "File not found: $filePath" . PHP_EOL;
         }
 
         libxml_use_internal_errors(true);
@@ -26,17 +23,10 @@ class ValidateInput
                 Log::error($formattedError);
             }
             libxml_clear_errors();
-            return [
-                'status' => false,
-                'message' => "Failed to parse XML",
-                'errors' => $errors
-            ];
+            echo "Failed to parse XML" . PHP_EOL;
         }
 
-        return [
-            'status' => true,
-            'message' => "XML is well-formed"
-        ];
+        echo "XML is well-formed" . PHP_EOL;
     }
 
     protected function formatError($error)
