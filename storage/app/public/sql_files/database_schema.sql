@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS root ( id CHAR(8) PRIMARY KEY ,catalog varchar(255)) ;
+CREATE TABLE IF NOT EXISTS catalog ( id CHAR(8) PRIMARY KEY ,item varchar(255)) ;
+CREATE TABLE IF NOT EXISTS item ( id CHAR(8) PRIMARY KEY ,entity_id varchar(255), CategoryName varchar(255), sku varchar(255), name varchar(255), description varchar(255), shortdesc varchar(255), price varchar(255), link varchar(255), image varchar(255), Brand varchar(255), Rating varchar(255), CaffeineType varchar(255), Count varchar(255), Flavored varchar(255), Seasonal varchar(255), Instock varchar(255), Facebook varchar(255), IsKCup varchar(255)) ;

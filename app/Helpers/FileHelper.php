@@ -23,7 +23,7 @@ class FileHelper
         }
 
         File::put($filePath, $content);
-        echo $msg . $filePath . PHP_EOL;
+        echo $msg . " " . $filePath . PHP_EOL;
 
     }
 
