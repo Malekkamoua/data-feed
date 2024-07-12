@@ -10,7 +10,6 @@ use App\Services\DatabaseConstruct;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Artisan;
-use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 
 class processData extends Command
@@ -35,50 +34,51 @@ class processData extends Command
     {
         $this->info('Hello user :) ');
 
-        $this->info('Please provide your database credentials');
-        $dbConnection = $this->ask('Database connection (mysql) ');
-        $dbHost = $this->ask('Database host');
-        $dbPort = $this->ask('Database port');
-        $dbName = $this->ask('Database name ');
-        $dbUsername = $this->ask('Username ');
-        $dbPassword = $this->ask('Password ');
+        $outputChoice = $this->choice(
+            'How do you want your output: ',
+            ['Saved in database directly', 'Simply generate database scripts (create - insert)'],
+            0
+        );
 
-        if (!$dbName || !$dbUsername) {
-            $this->error('Database name and username are required.');
-            Log::error('Database name and username are required.');
-            return 1;
-        }
+        $saveInDatabase = $outputChoice == 'Saved in database directly' ? true : false;
 
-        $this->updateEnvFile([
-            'DB_CONNECTION' => $dbConnection ? $dbConnection : 'mysql',
-            'DB_PORT' => $dbPort ? $dbPort : '3306',
-            'DB_HOST' => $dbHost ? $dbHost : '127.0.0.1',
-            'DB_DATABASE' => $dbName,
-            'DB_USERNAME' => $dbUsername,
-            'DB_PASSWORD' => $dbPassword,
-        ]);
+        if ($saveInDatabase) {
 
-        $this->info('Database configuration updated successfully.');
+            $this->info('Please provide your database credentials');
+            $dbConnection = $this->ask('Database connection (mysql) ');
+            $dbHost = $this->ask('Database host');
+            $dbPort = $this->ask('Database port');
+            $dbName = $this->ask('Database name ');
+            $dbUsername = $this->ask('Username ');
+            $dbPassword = $this->ask('Password ');
 
-        try {
-
-            $input = new ArrayInput(['--force' => true]);
-            $output = new BufferedOutput();
-            Artisan::call('migrate', [], $output);
-
-            $outputContent = $output->fetch();
-
-            if (strpos($outputContent, 'Proceed with the migrations?') !== false) {
-                $input->setArgument('command', 'migrate');
-                $input->setOption('--force', true);
-                $input->setInteractive(false);
-                Artisan::handle($input, $output);
+            if (!$dbName || !$dbUsername) {
+                $this->error('Database name and username are required.');
+                Log::error('Database name and username are required.');
+                return 1;
             }
 
-            echo "Migrations executed successfully:\n$outputContent";
+            $this->updateEnvFile([
+                'DB_CONNECTION' => $dbConnection ? $dbConnection : 'mysql',
+                'DB_PORT' => $dbPort ? $dbPort : '3306',
+                'DB_HOST' => $dbHost ? $dbHost : '127.0.0.1',
+                'DB_DATABASE' => $dbName,
+                'DB_USERNAME' => $dbUsername,
+                'DB_PASSWORD' => $dbPassword,
+            ]);
 
-        } catch (\Exception $e) {
-            echo "Error running migrations: " . $e->getMessage();
+            $this->info('Database configuration updated successfully.');
+            $this->info('Press enter to continue..');
+
+            try {
+                $output = new BufferedOutput();
+                Artisan::call('migrate', [], $output);
+                $outputContent = $output->fetch();
+                echo "Migrations executed successfully:\n$outputContent";
+
+            } catch (\Exception $e) {
+                echo "Error running migrations: " . $e->getMessage();
+            }
         }
 
         $dataSourceChoice = $this->choice(
@@ -98,8 +98,8 @@ class processData extends Command
 
             $tagNames = $this->parseData->getTagNamesWithRelationships($xmlObject);
 
-            $this->databaseConstruct->createDataBaseFile($tagNames);
-            $this->databaseFeed->insertData($filePath);
+            $this->databaseConstruct->createDataBaseFile($tagNames, $saveInDatabase);
+            $this->databaseFeed->insertData($filePath, $saveInDatabase);
         } else {
             $this->info('Not ready yet :(');
         }

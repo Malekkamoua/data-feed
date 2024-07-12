@@ -9,10 +9,9 @@ use Illuminate\Support\Facades\File;
 
 class DatabaseFeed
 {
-    public function insertData($filePath)
+    public function insertData($filePath, $saveInDatabase = true)
     {
         try {
-            echo "Inserting data in database .." . PHP_EOL;
 
             $xml = simplexml_load_file($filePath, 'SimpleXMLElement', LIBXML_NOCDATA);
             $data = $this->parseXmlElement($xml);
@@ -79,23 +78,25 @@ class DatabaseFeed
 
             echo "Database feed file created successfully at " . $filePath . PHP_EOL;
 
-            // Execute the SQL script
-            try {
+            if ($saveInDatabase) {
+                // Execute the SQL script
+                try {
+                    echo "Inserting data in database .." . PHP_EOL;
 
-                foreach ($requests as $statement) {
-                    $trimmedStatement = trim($statement);
-                    if (!empty($trimmedStatement)) {
-                        DB::unprepared($trimmedStatement . ';');
+                    foreach ($requests as $statement) {
+                        $trimmedStatement = trim($statement);
+                        if (!empty($trimmedStatement)) {
+                            DB::unprepared($trimmedStatement . ';');
+                        }
                     }
+
+                    echo 'Table creations executed successfully.' . PHP_EOL;
+
+                } catch (Exception $e) {
+                    echo 'Error executing SQL script.' . PHP_EOL;
+                    Log::error("Error executing SQL script: {$e->getMessage()}");
                 }
-
-                echo 'Table creations executed successfully.' . PHP_EOL;
-
-            } catch (Exception $e) {
-                echo 'Error executing SQL script.' . PHP_EOL;
-                Log::error("Error executing SQL script: {$e->getMessage()}");
             }
-
 
         } catch (Exception $e) {
             echo "Error: " . $e;

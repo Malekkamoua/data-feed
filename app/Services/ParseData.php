@@ -23,6 +23,7 @@ class ParseData
 
         } catch (Exception $e) {
             Log::error("An Error has occured: $e");
+            return 1;
         }
 
     }

@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\File;
 
 class DatabaseConstruct
 {
-    public function createDataBaseFile($tagNames)
+    public function createDataBaseFile($tagNames, $saveInDatabase = true)
     {
         echo "Creating database file .." . PHP_EOL;
 
         $requests = [];
         foreach ($tagNames as $tagName => $children) {
-
+            //remove root 
             $sql = "CREATE TABLE IF NOT EXISTS " . $tagName . " ( id CHAR(8) PRIMARY KEY ,";
             $childCount = count($children);
 
@@ -43,21 +43,23 @@ class DatabaseConstruct
         File::put($filePath, $sqlContent);
         echo "Database file created successfully at " . $filePath . PHP_EOL;
 
-        // Execute the SQL script
-        try {
+        if ($saveInDatabase) {
+            // Execute the SQL script
+            try {
 
-            foreach ($requests as $statement) {
-                $trimmedStatement = trim($statement);
-                if (!empty($trimmedStatement)) {
-                    DB::unprepared($trimmedStatement . ';');
+                foreach ($requests as $statement) {
+                    $trimmedStatement = trim($statement);
+                    if (!empty($trimmedStatement)) {
+                        DB::unprepared($trimmedStatement . ';');
+                    }
                 }
+
+                echo 'Table creations executed successfully.' . PHP_EOL;
+
+            } catch (Exception $e) {
+                echo 'Error executing SQL script.' . PHP_EOL;
+                Log::error("Error executing SQL script: {$e->getMessage()}");
             }
-
-            echo 'Table creations executed successfully.' . PHP_EOL;
-
-        } catch (Exception $e) {
-            echo 'Error executing SQL script.' . PHP_EOL;
-            Log::error("Error executing SQL script: {$e->getMessage()}");
         }
 
     }
