@@ -2,16 +2,14 @@
 
 namespace App\Services;
 
-use Exception;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\File;
+use App\Helpers\FileHelper;
+use App\Helpers\DatabaseHelper;
+
 
 class DatabaseConstruct
 {
     public function createDataBaseFile($tagNames, $saveInDatabase = true)
     {
-        echo "Creating database file .." . PHP_EOL;
 
         $requests = [];
         foreach ($tagNames as $tagName => $children) {
@@ -30,36 +28,16 @@ class DatabaseConstruct
             $requests[] = $sql;
         }
 
+        //Save in file
         $sqlContent = implode(";\n", $requests) . ";";
-
-        // Define the directory and file name
-        $directory = storage_path('app\public\sql_files');
         $fileName = 'database_schema.sql';
-        $filePath = $directory . '/' . $fileName;
-        if (!File::exists($directory)) {
-            File::makeDirectory($directory, 0755, true);
-        }
-
-        File::put($filePath, $sqlContent);
-        echo "Database file created successfully at " . $filePath . PHP_EOL;
+        $msg = "Database file created successfully at";
+        FileHelper::createFile($fileName, $sqlContent, $msg);
 
         if ($saveInDatabase) {
             // Execute the SQL script
-            try {
-
-                foreach ($requests as $statement) {
-                    $trimmedStatement = trim($statement);
-                    if (!empty($trimmedStatement)) {
-                        DB::unprepared($trimmedStatement . ';');
-                    }
-                }
-
-                echo 'Table creations executed successfully.' . PHP_EOL;
-
-            } catch (Exception $e) {
-                echo 'Error executing SQL script.' . PHP_EOL;
-                Log::error("Error executing SQL script: {$e->getMessage()}");
-            }
+            $msg = 'Table creation executed successfully.';
+            DatabaseHelper::runDatabaseCommands($requests, $msg);
         }
 
     }

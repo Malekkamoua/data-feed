@@ -6,11 +6,9 @@ use App\Services\ParseData;
 use App\Services\DatabaseFeed;
 use App\Services\validateInput;
 use Illuminate\Console\Command;
+use App\Helpers\DatabaseHelper;
 use App\Services\DatabaseConstruct;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Artisan;
-use Symfony\Component\Console\Output\BufferedOutput;
 
 class processData extends Command
 {
@@ -58,7 +56,7 @@ class processData extends Command
                 return 1;
             }
 
-            $this->updateEnvFile([
+            DatabaseHelper::updateEnvFile([
                 'DB_CONNECTION' => $dbConnection ? $dbConnection : 'mysql',
                 'DB_PORT' => $dbPort ? $dbPort : '3306',
                 'DB_HOST' => $dbHost ? $dbHost : '127.0.0.1',
@@ -70,15 +68,7 @@ class processData extends Command
             $this->info('Database configuration updated successfully.');
             $this->info('Press enter to continue..');
 
-            try {
-                $output = new BufferedOutput();
-                Artisan::call('migrate', [], $output);
-                $outputContent = $output->fetch();
-                echo "Migrations executed successfully:\n$outputContent";
-
-            } catch (\Exception $e) {
-                echo "Error running migrations: " . $e->getMessage();
-            }
+            DatabaseHelper::makeMigration();
         }
 
         $dataSourceChoice = $this->choice(
@@ -87,14 +77,13 @@ class processData extends Command
             0
         );
 
-        $this->info("You prefer $dataSourceChoice.");
-
         if ($dataSourceChoice == 'disk') {
             $filePath = $this->ask('Please provide the complete path to your XML file');
             $xmlContent = file_get_contents($filePath);
             $xmlObject = simplexml_load_string($xmlContent);
 
             $this->validateInput->readAndCheck($filePath, $xmlContent, $xmlObject);
+
 
             $tagNames = $this->parseData->getTagNamesWithRelationships($xmlObject);
 
@@ -105,31 +94,6 @@ class processData extends Command
         }
 
         return 0;
-    }
-
-    protected function updateEnvFile(array $data)
-    {
-        $envPath = base_path('.env');
-
-        if (!File::exists($envPath)) {
-            $this->error('The .env file does not exist.');
-            Log::error('The .env file does not exist.');
-
-            return;
-        }
-
-        $envContent = File::get($envPath);
-        foreach ($data as $key => $value) {
-            $pattern = "/^{$key}=.*/m";
-            $replacement = "{$key}={$value}";
-            if (preg_match($pattern, $envContent)) {
-                $envContent = preg_replace($pattern, $replacement, $envContent);
-            } else {
-                $envContent .= "\n{$key}={$value}";
-            }
-        }
-
-        File::put($envPath, $envContent);
     }
 
 }

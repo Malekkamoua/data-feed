@@ -2,10 +2,11 @@
 
 namespace App\Services;
 
+use App\Helpers\DatabaseHelper;
+use App\Helpers\KeyHelper;
 use Exception;
-use Illuminate\Support\Facades\DB;
+use App\Helpers\FileHelper;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\File;
 
 class DatabaseFeed
 {
@@ -31,21 +32,13 @@ class DatabaseFeed
                 }
             }
 
-            // Define the directory and file name
-            $directory = storage_path('app\public\sql_files');
-            $fileName = 'database_feed.sql';
-            $filePath = $directory . '/' . $fileName;
 
-            // Check if the directory exists, if not, create it
-            if (!File::exists($directory)) {
-                File::makeDirectory($directory, 0755, true);
-            }
             $requests = [];
 
             foreach ($itemsData as $index => $item) {
 
                 $keys = ['id'];
-                $values = ["'" . $this->generate_custom_uuid8() . "'"];
+                $values = ["'" . KeyHelper::generateUuid8() . "'"];
                 foreach ($item as $key => $value) {
                     if ($key != "parentTagName" && $value != "parentTagName") {
                         array_push($keys, $key);
@@ -73,29 +66,17 @@ class DatabaseFeed
 
             }
 
+            //Save in file
             $sqlContent = implode(";\n", $requests) . ";";
-            File::put($filePath, $sqlContent);
+            $fileName = 'database_schema.sql';
+            $msg = "Database feed created successfully at";
+            FileHelper::createFile($fileName, $sqlContent, $msg);
 
-            echo "Database feed file created successfully at " . $filePath . PHP_EOL;
 
             if ($saveInDatabase) {
                 // Execute the SQL script
-                try {
-                    echo "Inserting data in database .." . PHP_EOL;
-
-                    foreach ($requests as $statement) {
-                        $trimmedStatement = trim($statement);
-                        if (!empty($trimmedStatement)) {
-                            DB::unprepared($trimmedStatement . ';');
-                        }
-                    }
-
-                    echo 'Table creations executed successfully.' . PHP_EOL;
-
-                } catch (Exception $e) {
-                    echo 'Error executing SQL script.' . PHP_EOL;
-                    Log::error("Error executing SQL script: {$e->getMessage()}");
-                }
+                $msg = 'Table feed executed successfully.';
+                DatabaseHelper::runDatabaseCommands($requests, $msg);
             }
 
         } catch (Exception $e) {
@@ -124,16 +105,6 @@ class DatabaseFeed
         }
 
         return $parsedData;
-    }
-
-    function generate_custom_uuid8()
-    {
-        $chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $uuid = '';
-        for ($i = 0; $i < 8; $i++) {
-            $uuid .= $chars[mt_rand(0, 61)];
-        }
-        return $uuid;
     }
 
 }
