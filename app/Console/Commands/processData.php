@@ -2,18 +2,19 @@
 
 namespace App\Console\Commands;
 
+use Exception;
+use GuzzleHttp\Client;
 use App\Services\ParseData;
 use App\Services\DatabaseFeed;
+use App\Helpers\DatabaseHelper;
 use App\Services\validateInput;
 use Illuminate\Console\Command;
-use App\Helpers\DatabaseHelper;
 use App\Services\DatabaseConstruct;
 use Illuminate\Support\Facades\Log;
 
 class processData extends Command
 {
     protected $signature = 'app:process-data';
-    protected $description = 'Check XML file for errors and return the line where it has a problem';
     protected $validateInput;
     protected $parseData;
     protected $databaseConstruct;
@@ -43,23 +44,17 @@ class processData extends Command
         if ($saveInDatabase) {
 
             $this->info('Please provide your database credentials');
-            $dbConnection = $this->ask('Database connection (mysql) ');
-            $dbHost = $this->ask('Database host');
-            $dbPort = $this->ask('Database port');
-            $dbName = $this->ask('Database name ');
-            $dbUsername = $this->ask('Username ');
-            $dbPassword = $this->ask('Password ');
-
-            if (!$dbName || !$dbUsername) {
-                $this->error('Database name and username are required.');
-                Log::error('Database name and username are required.');
-                return 1;
-            }
+            $dbConnection = $this->ask('Database connection', 'mysql');
+            $dbHost = $this->ask('Database host', '127.0.0.1');
+            $dbPort = $this->ask('Database port', '3306');
+            $dbName = $this->ask('Database name', 'kaufland-coding-test-malek-kamoua');
+            $dbUsername = $this->ask('Username', 'root');
+            $dbPassword = $this->ask('Password');
 
             DatabaseHelper::updateEnvFile([
-                'DB_CONNECTION' => $dbConnection ? $dbConnection : 'mysql',
-                'DB_PORT' => $dbPort ? $dbPort : '3306',
-                'DB_HOST' => $dbHost ? $dbHost : '127.0.0.1',
+                'DB_CONNECTION' => $dbConnection,
+                'DB_PORT' => $dbPort,
+                'DB_HOST' => $dbHost,
                 'DB_DATABASE' => $dbName,
                 'DB_USERNAME' => $dbUsername,
                 'DB_PASSWORD' => $dbPassword,
@@ -78,20 +73,42 @@ class processData extends Command
         );
 
         if ($dataSourceChoice == 'disk') {
-            $filePath = $this->ask('Please provide the complete path to your XML file');
-            $xmlContent = file_get_contents($filePath);
-            $xmlObject = simplexml_load_string($xmlContent);
 
-            $this->validateInput->readAndCheck($filePath, $xmlContent, $xmlObject);
+            $filePath = $this->ask('Please provide the complete path to your XML file', 'storage/data/feed-small.xml');
+            $validationResult = $this->validateInput->readAndCheck($filePath);
 
+            if ($validationResult['status']) {
+                $this->info($validationResult['message']);
+                $xmlObject = $validationResult['xmlObject'];
+                $xmlContent = $validationResult['xmlContent'];
+            } else {
+                foreach ($validationResult['errors'] as $error) {
+                    return $this->error($error);
+                }
+            }
 
-            $tagNames = $this->parseData->getTagNamesWithRelationships($xmlObject);
-
-            $this->databaseConstruct->createDataBaseFile($tagNames, $saveInDatabase);
-            $this->databaseFeed->insertData($filePath, $saveInDatabase);
         } else {
-            $this->info('Not ready yet :(');
+            $url = $this->ask('Please provide the link to your XML data', 'https://thetestrequest.com/articles.xml');
+            //Verifies the SSL certiciate of the website to ensure it's not a threat
+            $caPath = storage_path('cert/cacert.pem');
+            $client = new Client([
+                'verify' => $caPath,
+            ]);
+
+            try {
+                $response = $client->get($url);
+                $this->info('XML data fetched successfully.');
+                $xmlContent = $response->getBody()->getContents();
+                $xmlObject = simplexml_load_string($xmlContent);
+            } catch (Exception $e) {
+                Log::error('Failed to fetch the XML data. Error: ' . $e->getMessage());
+                return $this->error('Failed to fetch the XML data. Error: ' . $e->getMessage());
+            }
         }
+
+        $tagNames = $this->parseData->getTagNamesWithRelationships($xmlObject);
+        $this->databaseConstruct->createDataBaseFile($tagNames, $saveInDatabase);
+        $this->databaseFeed->insertData($xmlContent, $saveInDatabase);
 
         return 0;
     }

@@ -10,11 +10,11 @@ use Illuminate\Support\Facades\Log;
 
 class DatabaseFeed
 {
-    public function insertData($filePath, $saveInDatabase = true)
+    public function insertData($data, $saveInDatabase = true)
     {
         try {
 
-            $xml = simplexml_load_file($filePath, 'SimpleXMLElement', LIBXML_NOCDATA);
+            $xml = simplexml_load_string($data, 'SimpleXMLElement', LIBXML_NOCDATA);
             $data = $this->parseXmlElement($xml);
 
             $itemsData = [];
@@ -37,7 +37,7 @@ class DatabaseFeed
 
             foreach ($itemsData as $index => $item) {
 
-                $keys = ['id'];
+                $keys = ['uuid'];
                 $values = ["'" . KeyHelper::generateUuid8() . "'"];
                 foreach ($item as $key => $value) {
                     if ($key != "parentTagName" && $value != "parentTagName") {
@@ -68,15 +68,15 @@ class DatabaseFeed
 
             //Save in file
             $sqlContent = implode(";\n", $requests) . ";";
-            $fileName = 'database_schema.sql';
+            $fileName = 'database_feed.sql';
             $msg = "Database feed created successfully at";
             FileHelper::createFile($fileName, $sqlContent, $msg);
 
 
             if ($saveInDatabase) {
                 // Execute the SQL script
-                $msg = 'Table feed executed successfully.';
-                DatabaseHelper::runDatabaseCommands($requests, $msg);
+                $operation = 'Table feed';
+                DatabaseHelper::runDatabaseCommands($requests, $operation);
             }
 
         } catch (Exception $e) {

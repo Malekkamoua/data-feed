@@ -13,19 +13,20 @@ class DatabaseConstruct
 
         $requests = [];
         foreach ($tagNames as $tagName => $children) {
-            //remove root 
-            $sql = "CREATE TABLE IF NOT EXISTS " . $tagName . " ( id CHAR(8) PRIMARY KEY ,";
-            $childCount = count($children);
+            if ($tagName != "root") {
+                $sql = "CREATE TABLE IF NOT EXISTS " . $tagName . " ( uuid CHAR(8) PRIMARY KEY ,";
+                $childCount = count($children);
 
-            foreach ($children as $index => $child) {
-                $sql .= $child . " varchar(255)";
-                if ($index < $childCount - 1) {
-                    $sql .= ", ";
-                } else {
-                    $sql .= ") ";
+                foreach ($children as $index => $child) {
+                    $sql .= $child . " varchar(255)";
+                    if ($index < $childCount - 1) {
+                        $sql .= ", ";
+                    } else {
+                        $sql .= ") ";
+                    }
                 }
+                $requests[] = $sql;
             }
-            $requests[] = $sql;
         }
 
         //Save in file
@@ -36,8 +37,8 @@ class DatabaseConstruct
 
         if ($saveInDatabase) {
             // Execute the SQL script
-            $msg = 'Table creation executed successfully.';
-            DatabaseHelper::runDatabaseCommands($requests, $msg);
+            $operation = 'Table creation';
+            DatabaseHelper::runDatabaseCommands($requests, $operation);
         }
 
     }

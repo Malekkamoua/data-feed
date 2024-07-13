@@ -35,6 +35,9 @@ class ParseData
             $parent = $element->xpath('parent::*')[0];
             $parentTagName = $parent->getName();
 
+            //Nessecary for database scripting: (eg created-at => created_at --format accepted by databse)
+            $tagName = str_replace("-", "_", $tagName);
+
             // Track relationships
             if (!isset($tagNames[$parentTagName])) {
                 $tagNames[$parentTagName] = [];

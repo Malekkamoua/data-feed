@@ -6,41 +6,50 @@ use Illuminate\Support\Facades\Log;
 
 class ValidateInput
 {
-    public function readAndCheck($filePath, $xmlContent, $xmlObject)
+    public function readAndCheck($filePath)
     {
-        if (!file_exists($filePath)) {
-            Log::error("File not found: $filePath");
-            return [
-                'status' => false,
-                'message' => "File not found: $filePath"
-            ];
-        }
+        $errors = [];
 
-        libxml_use_internal_errors(true);
-
-        if ($xmlObject === false) {
-            $errors = [];
-            foreach (libxml_get_errors() as $error) {
-                $formattedError = $this->formatError($error);
-                $errors[] = $formattedError;
-                Log::error($formattedError);
+        try {
+            // Check if the file exists
+            if (!file_exists($filePath)) {
+                throw new \Exception("File not found or cannot be opened: $filePath");
             }
-            libxml_clear_errors();
+
+            // Load XML content
+            $xmlContent = file_get_contents($filePath);
+            libxml_use_internal_errors(true);
+            $xmlObject = simplexml_load_string($xmlContent);
+
+            if ($xmlObject === false) {
+                foreach (libxml_get_errors() as $error) {
+                    $formattedError = sprintf("Error in line %d: %s", $error->line, trim($error->message));
+                    $errors[] = $formattedError;
+                    Log::error($formattedError);
+                }
+                libxml_clear_errors();
+
+                return [
+                    'status' => false,
+                    'message' => "Failed to parse XML",
+                    'errors' => $errors
+                ];
+            }
+
+            return [
+                'status' => true,
+                'message' => "XML is well-formed",
+                'xmlObject' => $xmlObject,
+                'xmlContent' => $xmlContent
+            ];
+        } catch (\Exception $e) {
+            Log::error($e->getMessage());
+
             return [
                 'status' => false,
-                'message' => "Failed to parse XML",
-                'errors' => $errors
+                'message' => $e->getMessage(),
+                'errors' => [$e->getMessage()]
             ];
         }
-
-        return [
-            'status' => true,
-            'message' => "XML is well-formed"
-        ];
-    }
-
-    protected function formatError($error)
-    {
-        return sprintf("Error in line %d: %s", $error->line, trim($error->message));
     }
 }

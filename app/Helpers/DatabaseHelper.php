@@ -66,22 +66,33 @@ class DatabaseHelper
      * @param mixed $requests
      * @return void
      */
-    public static function runDatabaseCommands($requests, $msg)
+    public static function runDatabaseCommands($requests, $operation)
     {
-        try {
+        $logFilePath = "storage\logs\dataFeedConsole.log";
+        $errors = false;
 
+        try {
             foreach ($requests as $statement) {
                 $trimmedStatement = trim($statement);
                 if (!empty($trimmedStatement)) {
-                    DB::unprepared($trimmedStatement . ';');
+                    try {
+                        DB::unprepared($trimmedStatement . ';');
+                    } catch (Exception $e) {
+                        $errors = true;
+                        Log::error("Error executing SQL statement: {$e->getMessage()}");
+                    }
                 }
             }
 
-            echo $msg . PHP_EOL;
+            if ($errors) {
+                echo $operation . " completed with errors. Please check the log at: {$logFilePath}" . PHP_EOL;
+            } else {
+                echo $operation . " completed successfully." . PHP_EOL;
+            }
 
         } catch (Exception $e) {
-            echo 'Error executing SQL script.' . PHP_EOL;
-            Log::error("Error executing SQL script: {$e->getMessage()}");
+            echo 'Error processing the SQL script.' . PHP_EOL;
+            Log::error("Error processing the SQL script: {$e->getMessage()}");
         }
     }
 
