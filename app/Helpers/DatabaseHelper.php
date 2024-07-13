@@ -27,9 +27,24 @@ class DatabaseHelper
         }
 
         $envContent = File::get($envPath);
+
+        // Determine which database fields to include based on DB_CONNECTION
+        if ($data['DB_CONNECTION'] === 'sqlite') {
+            $fieldsToRemove = ['DB_HOST', 'DB_PORT', 'DB_USERNAME', 'DB_PASSWORD'];
+            $data['DB_DATABASE'] = "storage/app/public/sql_files/" . $data['DB_DATABASE'] . ".sqlite";
+        } else {
+            $fieldsToRemove = [];
+        }
+
         foreach ($data as $key => $value) {
+            // Skip fields that are to be removed
+            if (in_array($key, $fieldsToRemove)) {
+                continue;
+            }
+
             $pattern = "/^{$key}=.*/m";
             $replacement = "{$key}={$value}";
+
             if (preg_match($pattern, $envContent)) {
                 $envContent = preg_replace($pattern, $replacement, $envContent);
             } else {

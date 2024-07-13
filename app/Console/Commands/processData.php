@@ -44,12 +44,26 @@ class processData extends Command
         if ($saveInDatabase) {
 
             $this->info('Please provide your database credentials');
-            $dbConnection = $this->ask('Database connection', 'mysql');
-            $dbHost = $this->ask('Database host', '127.0.0.1');
-            $dbPort = $this->ask('Database port', '3306');
-            $dbName = $this->ask('Database name', 'kaufland-coding-test-malek-kamoua');
-            $dbUsername = $this->ask('Username', 'root');
-            $dbPassword = $this->ask('Password');
+
+            $dbHost = "";
+            $dbPort = "";
+            $dbUsername = "";
+            $dbPassword = "";
+
+            $dbConnection = $this->choice(
+                'Data source: ',
+                ['mysql', 'sqlite'],
+                0
+            );
+
+            $dbName = $this->ask('Database name');
+
+            if ($dbConnection == "mysql") {
+                $dbHost = $this->ask('Database host');
+                $dbPort = $this->ask('Database port');
+                $dbUsername = $this->ask('Username');
+                $dbPassword = $this->ask('Password');
+            }
 
             DatabaseHelper::updateEnvFile([
                 'DB_CONNECTION' => $dbConnection,

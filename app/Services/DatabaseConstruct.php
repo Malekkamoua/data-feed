@@ -18,7 +18,7 @@ class DatabaseConstruct
                 $childCount = count($children);
 
                 foreach ($children as $index => $child) {
-                    $sql .= $child . " varchar(255)";
+                    $sql .= $child . " varchar(1000)";
                     if ($index < $childCount - 1) {
                         $sql .= ", ";
                     } else {
