@@ -783,3 +783,4 @@ Stack trace:
 #15 D:\\kaufland-coding-test\\kaufland-data-feed\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
 #16 {main}
 "} 
+[2024-07-13 09:38:17] local.ERROR: Error running migrations: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) (Connection: mysql, SQL: select table_name as `name`, (data_length + index_length) as `size`, table_comment as `comment`, engine as `engine`, table_collation as `collation` from information_schema.tables where table_schema = '' and table_type in ('BASE TABLE', 'SYSTEM VERSIONED') order by table_name)  

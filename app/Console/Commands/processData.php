@@ -56,12 +56,12 @@ class processData extends Command
                 0
             );
 
-            $dbName = $this->ask('Database name');
+            $dbName = $this->ask('Database name', 'kaufland-coding-test-malek-kamoua');
 
             if ($dbConnection == "mysql") {
-                $dbHost = $this->ask('Database host');
-                $dbPort = $this->ask('Database port');
-                $dbUsername = $this->ask('Username');
+                $dbHost = $this->ask('Database host', '127.0.0.1');
+                $dbPort = $this->ask('Database port', '3306');
+                $dbUsername = $this->ask('Username', 'root');
                 $dbPassword = $this->ask('Password');
             }
 
