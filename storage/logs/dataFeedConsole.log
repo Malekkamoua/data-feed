@@ -2599,3 +2599,5 @@ Stack trace:
 [2024-07-15 13:12:59] local.ERROR: Error in line 33: Opening and ending tag mismatch: items line 5 and item  
 [2024-07-15 13:14:30] local.ERROR: File not found or cannot be opened: non_existent_file.xml  
 [2024-07-15 13:14:30] local.ERROR: Error in line 33: Opening and ending tag mismatch: items line 5 and item  
+[2024-07-15 13:23:36] local.ERROR: File not found or cannot be opened: non_existent_file.xml  
+[2024-07-15 13:23:36] local.ERROR: Error in line 33: Opening and ending tag mismatch: items line 5 and item  
