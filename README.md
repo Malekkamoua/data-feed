@@ -26,8 +26,8 @@ php artisan app:process-data
 ## Command Functionality
 ### Output Options:
 
-- Saved XML data into the configured database.
-- simply generate database scripts (create - insert)
+- Saves XML data into a configured database.
+- Simply generate database scripts (create - insert).
 
 ### Database Configuration (in case the user chose saving data directly into database) :
 - Prompts for database credentials (MySQL or SQLite).
@@ -36,11 +36,11 @@ php artisan app:process-data
 
 ### Data Source:
 
-#### disk: 
+#### From disk: 
 - Reads XML data from a local file.
 - Prompts for the complete path to the XML file.
 - Validates and processes XML data.
-#### API: 
+#### From API: 
 - Fetches XML data from an API endpoint.
 - Prompts for the API URL.
 - Fetches XML data using Guzzle HTTP client.
@@ -63,7 +63,7 @@ Assume you have a local XML file located at storage/data/feed-small.xml and you 
 php artisan app:process-data
 ```
 Follow the prompts to configure the database and specify the data source as disk, providing the path to your XML file.
-
+If you chose the API option, you'll be prompt to provide the adequate link to your XML data.
 ### Notes
 - Ensure proper file permissions for the storage/app/public/sql_files/ directory.
 - Handle sensitive database credentials securely, especially in production environments.
