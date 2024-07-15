@@ -11,6 +11,7 @@ use App\Services\validateInput;
 use Illuminate\Console\Command;
 use App\Services\DatabaseConstruct;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\File;
 
 class processData extends Command
 {
@@ -121,6 +122,13 @@ class processData extends Command
         }
 
         $tagNames = $this->parseData->getTagNamesWithRelationships($xmlObject);
+
+        //sql_files will be the directory that contains all the generated sql scripts
+        $directory = storage_path('app/public/sql_files/');
+        if (!File::exists($directory)) {
+            File::makeDirectory($directory, 0755, true);
+        }
+
         $this->databaseConstruct->createDataBaseFile($tagNames, $saveInDatabase);
         $this->databaseFeed->insertData($xmlContent, $saveInDatabase);
 

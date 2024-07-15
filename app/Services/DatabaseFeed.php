@@ -2,11 +2,12 @@
 
 namespace App\Services;
 
-use App\Helpers\DatabaseHelper;
-use App\Helpers\KeyHelper;
 use Exception;
+use App\Helpers\KeyHelper;
 use App\Helpers\FileHelper;
+use App\Helpers\DatabaseHelper;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\File;
 
 class DatabaseFeed
 {
@@ -69,9 +70,11 @@ class DatabaseFeed
             //Save in file
             $sqlContent = implode(";\n", $requests) . ";";
             $fileName = 'database_feed.sql';
-            $msg = "Database feed created successfully at";
-            FileHelper::createFile($fileName, $sqlContent, $msg);
+            $directory = storage_path('app/public/sql_files/');
 
+            file_put_contents($directory . $fileName, $sqlContent);
+
+            echo "Database feed created successfully at app/public/sql_files/" . $fileName . PHP_EOL;
 
             if ($saveInDatabase) {
                 // Execute the SQL script

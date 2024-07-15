@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+    <cat>test</cat>
+    <issue>134555</issue>
+    <items>
+        <entity_id>340</entity_id>
+        <CategoryName>
+            <![CDATA[Green Mountain Ground Coffee]]>
+        </CategoryName>
+        <sku>20</sku>
+        <name>
+            <![CDATA[Green Mountain Coffee French Roast Ground Coffee 24 2.2oz Bag]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Green Mountain Coffee French Roast Ground Coffee 24 2.2oz Bag steeps cup after cup of smoky-sweet, complex dark roast coffee from Green Mountain Ground Coffee.]]>
+        </shortdesc>
+        <price>41.6000</price>
+        <link>
+            http://www.coffeeforless.com/green-mountain-coffee-french-roast-ground-coffee-24-2-2oz-bag.html</link>
+        <image>http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/intro/frac_box.jpg</image>
+        <Brand>
+            <![CDATA[Green Mountain Coffee]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count>24</Count>
+        <Flavored>No</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>342</entity_id>
+        <CategoryName>
+            <![CDATA[Nestle Hot Chocolate]]>
+        </CategoryName>
+        <sku>5000081171</sku>
+        <name>
+            <![CDATA[Nestle's Rich Hot Chocolate 50 Packets]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Nestle's Rich Hot Chocolate 50 Packets bulk quantity prepare 50 individual servings of milk chocolate instant hot cocoa from Nestle Hot Chocolate.]]>
+        </shortdesc>
+        <price>11.9900</price>
+        <link>http://www.coffeeforless.com/nestles-milk-hot-chocolate-50-packets.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//n/e/nestle-hot-chocolate-mix-50-packets.png</image>
+        <Brand>
+            <![CDATA[Nestle]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType></CaffeineType>
+        <Count>50</Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>345</entity_id>
+        <CategoryName>
+            <![CDATA[Tazo Tea]]>
+        </CategoryName>
+        <sku>149901</sku>
+        <name>
+            <![CDATA[Tazo Calm Tea 24ct Box]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Tazo Calm Tea 24ct box allow you to make 24 individual servings of brisk, complicated blended tea when you serve Tazo Tea.]]>
+        </shortdesc>
+        <price>6.5000</price>
+        <link>http://www.coffeeforless.com/tazo-calm-tea-24ct-box.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/coffeepods/tazo-calm-tea-24ct-box.jpg</image>
+        <Brand>
+            <![CDATA[Tazo]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType>Caffeine Free</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>346</entity_id>
+        <CategoryName>
+            <![CDATA[Flavored Coffee Beans]]>
+        </CategoryName>
+        <sku>06-1745</sku>
+        <name>
+            <![CDATA[Barrie House Irish Cream Coffee Beans 3 5lb Bags]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Barrie House Irish Cream Coffee Beans 3 5lb Bags bulk quantity makes many pots of freshly ground Irish cream flavored coffee from Barrie House Coffee Beans.]]>
+        </shortdesc>
+        <price>129.9900</price>
+        <link>http://www.coffeeforless.com/barrie-house-irish-cream-coffee-beans-3-5lb-bags.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//b/a/barrie-house-irish-cream-coffee-beans-3-5lb-bags.jpg</image>
+        <Brand>
+            <![CDATA[Barrie House]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>No</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>347</entity_id>
+        <CategoryName>
+            <![CDATA[Paper Towels]]>
+        </CategoryName>
+        <sku>190</sku>
+        <name>
+            <![CDATA[Marcal Sunrise Rolled Towels]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Marcal Sunrise Rolled Towels keep you stocked with disposable paper towels that perfectly meet your needs when you need Paper Towels.]]>
+        </shortdesc>
+        <price>21.9900</price>
+        <link>http://www.coffeeforless.com/marcal-sunrise-rolled-towels.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/sunrise_paper_towels.jpg</image>
+        <Brand>
+            <![CDATA[Marcal]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count>15</Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>348</entity_id>
+        <CategoryName>
+            <![CDATA[Plastic Utensils]]>
+        </CategoryName>
+        <sku>169</sku>
+        <name>
+            <![CDATA[Medium Weight Plastic Spoons 1000ct]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Medium Weight Plastic Spoons 1000ct supply your coffee or beverage service at home or at the office with disposable Plastic Utensils.]]>
+        </shortdesc>
+        <price>25.0000</price>
+        <link>http://www.coffeeforless.com/medium-weight-plastic-spoons-1000ct.html</link>
+        <image>http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/spoons.jpg</image>
+        <Brand>
+            <![CDATA[Sweetheart]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count>1000</Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>350</entity_id>
+        <CategoryName>
+            <![CDATA[Swiss Miss Hot Chocolate]]>
+        </CategoryName>
+        <sku>1570007288</sku>
+        <name>
+            <![CDATA[Swiss Miss Hot Chocolate No Sugar Added Mix 24 Packets]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Swiss Miss Hot Chocolate No Sugar Added Mix 24 Packets per box prepare 24 individual servings of sugarless chocolate instant hot cocoa from Swiss Miss Hot Chocolate.]]>
+        </shortdesc>
+        <price>10.0000</price>
+        <link>
+            http://www.coffeeforless.com/swiss-miss-hot-chocolate-no-sugar-added-mix-24-packets.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/main/swissmisssugarfree.gif</image>
+        <Brand>
+            <![CDATA[Swiss Miss]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType></CaffeineType>
+        <Count>24</Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>351</entity_id>
+        <CategoryName>
+            <![CDATA[Starbucks Ground Coffee]]>
+        </CategoryName>
+        <sku>247491</sku>
+        <name>
+            <![CDATA[Starbucks Caffe Verona Ground Coffee 18 2.5oz Bags]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Starbucks Caffe Verona Ground Coffee 18 2.5oz Bags allow you to produce mug after mug of sweet, spicy specialty coffee from Starbucks Ground Coffee.]]>
+        </shortdesc>
+        <price>44.5000</price>
+        <link>http://www.coffeeforless.com/starbucks-caffe-verona-ground-coffee-18-2-5oz-bags.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//s/t/starbucks_cafe_verona_portion_pack.jpg</image>
+        <Brand>
+            <![CDATA[Starbucks]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count>18</Count>
+        <Flavored>No</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>352</entity_id>
+        <CategoryName>
+            <![CDATA[Tazo Tea]]>
+        </CategoryName>
+        <sku>149900</sku>
+        <name>
+            <![CDATA[Tazo Zen Tea 24ct Box]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Tazo Zen Tea 24ct box allow you to brew 24 single servings of brisk, complicated blended tea when you steep Tazo Tea.]]>
+        </shortdesc>
+        <price>6.5000</price>
+        <link>http://www.coffeeforless.com/tazo-zen-tea-24ct-box.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/tazo/tazo-zen-tea-24ct-box.jpg</image>
+        <Brand>
+            <![CDATA[Tazo]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>No</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>354</entity_id>
+        <CategoryName>
+            <![CDATA[Bunn Coffee Machines]]>
+        </CategoryName>
+        <sku>343</sku>
+        <name>
+            <![CDATA[Bunn Twin 3 Gallon Automatic Coffee Urn U3]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[The Bunn Twin 3 Gallon Automatic Coffee Urn U3 coffee machine has the utility that you expect from a quality automatic coffee brewer by Bunn Coffee Machines.]]>
+        </shortdesc>
+        <price>3000.0000</price>
+        <link>http://www.coffeeforless.com/bunn-twin-3-gallon-automatic-coffee-urn-u3.html</link>
+        <image>http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/main/bunnurn2.gif</image>
+        <Brand>
+            <![CDATA[Bunn]]>
+        </Brand>
+        <Rating>4</Rating>
+        <CaffeineType></CaffeineType>
+        <Count></Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>356</entity_id>
+        <CategoryName>
+            <![CDATA[Bunn Coffee Machines]]>
+        </CategoryName>
+        <sku>369</sku>
+        <name>
+            <![CDATA[Bunn CWTF APS-MV Single Multi-Voltage Airpot Coffee Brewer]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[The Bunn CWTF APS-MV Single Multi-Voltage Airpot Coffee Brewer coffee machine features the options you expect from airpot coffee brewer by Bunn Coffee Machines.]]>
+        </shortdesc>
+        <price>900.0000</price>
+        <link>
+            http://www.coffeeforless.com/bunn-cwtf-aps-mv-single-multi-voltage-airpot-coffee-brewer.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/main/bunnairpot.gif</image>
+        <Brand>
+            <![CDATA[Bunn]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count></Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>358</entity_id>
+        <CategoryName>
+            <![CDATA[Bunn Coffee Machines]]>
+        </CategoryName>
+        <sku>363</sku>
+        <name>
+            <![CDATA[Bunn Single Coffee Brewer with Portable Server Single]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[The Bunn Single Coffee Brewer with Portable Server Single coffee machine is equipped with the features you expect from single cup coffee brewer by Bunn Coffee Machines.]]>
+        </shortdesc>
+        <price>1600.0000</price>
+        <link>http://www.coffeeforless.com/bunn-single-coffee-brewer-portable-server-single.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/main/bunnsingle.gif</image>
+        <Brand>
+            <![CDATA[Bunn]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count></Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>359</entity_id>
+        <CategoryName>
+            <![CDATA[Plates]]>
+        </CategoryName>
+        <sku>189</sku>
+        <name>
+            <![CDATA[Diplomat 9 inch Plastic Plates 500ct]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Diplomat 9 inch Plastic Plates 500ct case keep you stocked with 500 disposable plates that perfectly meet your needs when you need Plates.]]>
+        </shortdesc>
+        <price>76.0000</price>
+        <link>http://www.coffeeforless.com/diplomat-9-inch-plastic-plates-500ct.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/9inch_plastic_plates.jpg</image>
+        <Brand>
+            <![CDATA[Diplomat]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count>500</Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>360</entity_id>
+        <CategoryName>
+            <![CDATA[Bunn Coffee Machines]]>
+        </CategoryName>
+        <sku>368</sku>
+        <name>
+            <![CDATA[Bunn CWTF15-APS Single Airpot Coffee Brewer]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[The Bunn CWTF15-APS Single Airpot Coffee Brewer coffee machine provides the utility that you expect from a quality airpot coffee brewer by Bunn Coffee Machines.]]>
+        </shortdesc>
+        <price>900.0000</price>
+        <link>http://www.coffeeforless.com/bunn-cwtf15-aps-single-airpot-coffee-brewer.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/main/bunnairpot.gif</image>
+        <Brand>
+            <![CDATA[Bunn]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count></Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>362</entity_id>
+        <CategoryName>
+            <![CDATA[Bigelow Tea]]>
+        </CategoryName>
+        <sku>149</sku>
+        <name>
+            <![CDATA[Bigelow's Plantation Mint Tea 28ct Box]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Bigelow's Plantation Mint Tea 28ct box allow you to brew 28 single servings of cool mint herbal tea when you steep Bigelow Tea.]]>
+        </shortdesc>
+        <price>5.9500</price>
+        <link>http://www.coffeeforless.com/bigelows-plantation-mint-tea-28ct-box.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/coffeepods/bigelows-plantation-mint-tea-28ct-box.jpg</image>
+        <Brand>
+            <![CDATA[Bigelow]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>363</entity_id>
+        <CategoryName>
+            <![CDATA[Coffee Cups]]>
+        </CategoryName>
+        <sku>223</sku>
+        <name>
+            <![CDATA[8oz Styrofoam Coffee Cups 1000ct]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[8oz Styrofoam Coffee Cups 1000ct case allow you to stock your beverage service supplies with 1000 long-lasting, heat resistant Styrofoam hot beverage cups..]]>
+        </shortdesc>
+        <price>49.9900</price>
+        <link>http://www.coffeeforless.com/8oz-styrofoam-coffee-cups-1000ct.html</link>
+        <image>http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/DART_8oz_foam.jpg</image>
+        <Brand>
+            <![CDATA[Dart]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count>1000</Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>364</entity_id>
+        <CategoryName>
+            <![CDATA[Flavored Coffee Beans]]>
+        </CategoryName>
+        <sku>06-1785</sku>
+        <name>
+            <![CDATA[Barrie House Vanilla Cream Coffee Beans 3 5lb Bags]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[The combination of Colombian coffee, vanilla cream and hazelnut make this flavored coffee and unforgettable classic. Coffee Beans, 3 5lb Bags.]]>
+        </shortdesc>
+        <price>129.9900</price>
+        <link>http://www.coffeeforless.com/barrie-house-vanilla-cream-3-5lb-bags-of-beans.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//b/a/barrie-house-vanilla-cream-coffee-beans-3-5lb-bags.jpg</image>
+        <Brand>
+            <![CDATA[Barrie House]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal></Seasonal>
+        <Instock>No</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>366</entity_id>
+        <CategoryName>
+            <![CDATA[Flavored Coffee Beans]]>
+        </CategoryName>
+        <sku>06-1693</sku>
+        <name>
+            <![CDATA[Barrie House Creme Brulee Coffee Beans 3 5lb Bags]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Barrie House Creme Brulee Coffee Beans 3 5lb Bags bulk quantity brews many pots of freshly ground vanilla custard flavored coffee from Barrie House Coffee Beans.]]>
+        </shortdesc>
+        <price>129.9900</price>
+        <link>http://www.coffeeforless.com/barrie-house-creme-brulee-coffee-beans-3-5lb-bags.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//b/a/barrie-house-creme-brulee-coffee-beans-3-5lb-bags.jpg</image>
+        <Brand>
+            <![CDATA[Barrie House]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>No</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>367</entity_id>
+        <CategoryName>
+            <![CDATA[Green Mountain K-Cup&reg; Coffee]]>
+        </CategoryName>
+        <sku>6752C</sku>
+        <name>
+            <![CDATA[Green Mountain Coffee Mocha Nut Fudge K-Cup&reg; Coffee 96ct Flavored]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Green Mountain Coffee Mocha Nut Fudge K-Cup&amp;reg; Pods 96ct Flavored case infuses 96 individual servings of balanced, mild-bodied light roast coffee from Green Mountain K-Cup&amp;reg; Pods.]]>
+        </shortdesc>
+        <price>59.9600</price>
+        <link>
+            http://www.coffeeforless.com/green-mountain-coffee-mocha-nut-fudge-k-cups-96ct-flavored.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//g/r/green-mountain-coffee-mocha-nut-fudge-k-cups-96ct-flavored-914.jpg</image>
+        <Brand>
+            <![CDATA[Green Mountain Coffee]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count>96</Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>0</Facebook>
+        <IsKCup>1</IsKCup>
+    </item>
+    <item>
+        <entity_id>369</entity_id>
+        <CategoryName>
+            <![CDATA[Plastic Utensils]]>
+        </CategoryName>
+        <sku>170</sku>
+        <name>
+            <![CDATA[Plastic Medium Weight Soup Spoons 1000ct]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Plastic Medium Weight Soup Spoons 1000ct supply your coffee or beverage service at home or at the office with disposable Plastic Utensils.]]>
+        </shortdesc>
+        <price>85.0000</price>
+        <link>http://www.coffeeforless.com/plastic-medium-weight-soup-spoons-1000ct.html</link>
+        <image>http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/spoons.jpg</image>
+        <Brand>
+            <![CDATA[Sweetheart]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count>1000</Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>371</entity_id>
+        <CategoryName>
+            <![CDATA[Bunn Coffee Machines]]>
+        </CategoryName>
+        <sku>366</sku>
+        <name>
+            <![CDATA[Bunn Dual SH Soft Heat Coffee Brewer with Docking System]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[The Bunn Dual SH Soft Heat Coffee Brewer with Docking System coffee machine has the utility that you expect from a quality multipot coffee brewer by Bunn Coffee Machines.]]>
+        </shortdesc>
+        <price>3000.0000</price>
+        <link>http://www.coffeeforless.com/bunn-dual-sh-soft-heat-coffee-brewer-docking-system.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/main/bunndualsoft.gif</image>
+        <Brand>
+            <![CDATA[Bunn]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count></Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>374</entity_id>
+        <CategoryName>
+            <![CDATA[Flavored Coffee Beans]]>
+        </CategoryName>
+        <sku>06-1740</sku>
+        <name>
+            <![CDATA[Barrie House Hawaiian Coconut Coffee Beans 3 5lb Bags]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Barrie House Hawaiian Coconut Coffee Beans 3 5lb Bags bulk quantity makes many pots of distinctly fresh tropical coconut flavored coffee from Barrie House Coffee Beans.]]>
+        </shortdesc>
+        <price>129.9900</price>
+        <link>
+            http://www.coffeeforless.com/barrie-house-hawaiian-coconut-coffee-beans-3-5lb-bags.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//b/a/barrie-house-hawaiian-coconut-coffee-beans-3-5lb-bags.jpg</image>
+        <Brand>
+            <![CDATA[Barrie House]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>No</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>375</entity_id>
+        <CategoryName>
+            <![CDATA[Tetley Tea]]>
+        </CategoryName>
+        <sku>139</sku>
+        <name>
+            <![CDATA[Tetley's Peppermint Herbal Tea 20 Drawstring Tea Bag]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Tetley's Peppermint Herbal Tea 20 Drawstring Tea Bag box allow you to prepare 20 single cups of cool mint herbal tea when you make Tetley's Tea.]]>
+        </shortdesc>
+        <price>5.5000</price>
+        <link>http://www.coffeeforless.com/tetley-s-peppermint-herbal-tea-20-drawstring-tea-bag.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/intro/tetley_peppermint.gif</image>
+        <Brand>
+            <![CDATA[Tetley]]>
+        </Brand>
+        <Rating></Rating>
+        <CaffeineType>Caffeine Free</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>No</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>378</entity_id>
+        <CategoryName>
+            <![CDATA[Plates]]>
+        </CategoryName>
+        <sku>188</sku>
+        <name>
+            <![CDATA[Diplomat 6 inch Plastic Plates 1000ct]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Diplomat 6 inch Plastic Plates 1000ct case keep you stocked with 1000 disposable plates that perfectly meet your needs when you need Plates.]]>
+        </shortdesc>
+        <price>72.9900</price>
+        <link>http://www.coffeeforless.com/diplomat-6-inch-plastic-plates-1000ct.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/6inch_plastic_plates.jpg</image>
+        <Brand>
+            <![CDATA[Diplomat]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count>1000</Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>382</entity_id>
+        <CategoryName>
+            <![CDATA[Tazo Tea]]>
+        </CategoryName>
+        <sku>153961</sku>
+        <name>
+            <![CDATA[Tazo China Green Tips Tea 24ct Box]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Tazo China Green Tips Tea 24ct box allow you to prepare 24 single cups of light, earthy green tea when you make Tazo Tea.]]>
+        </shortdesc>
+        <price>6.5000</price>
+        <link>http://www.coffeeforless.com/tazo-china-green-tips-tea-24ct-box.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/coffeepods/tazo-china-green-tips-tea-24ct-box.jpg</image>
+        <Brand>
+            <![CDATA[Tazo]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>No</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>384</entity_id>
+        <CategoryName>
+            <![CDATA[Bunn Coffee Machines]]>
+        </CategoryName>
+        <sku>354</sku>
+        <name>
+            <![CDATA[Bunn CWTF 4/2 Twin 12 Cup Automatic Coffee Brewer with 6 Warmers]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[The Bunn CWTF 4/2 Twin 12 Cup Automatic Coffee Brewer with 6 Warmers is equipped with the features you expect from automatic coffee brewer by Bunn Coffee Machines.]]>
+        </shortdesc>
+        <price>1650.0000</price>
+        <link>
+            http://www.coffeeforless.com/bunn-cwtf-4-2-twin-12-cup-automatic-coffee-brewer-6-warmers.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/main/bunn4or6pot.gif</image>
+        <Brand>
+            <![CDATA[Bunn]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count></Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>386</entity_id>
+        <CategoryName>
+            <![CDATA[Plastic Utensils]]>
+        </CategoryName>
+        <sku>167</sku>
+        <name>
+            <![CDATA[Medium Weight Plastic Knives 1000ct]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Medium Weight Plastic Knives 1000ct supply your coffee or beverage service at home or at the office with disposable Plastic Utensils.]]>
+        </shortdesc>
+        <price>25.0000</price>
+        <link>http://www.coffeeforless.com/medium-weight-plastic-knives-1000ct.html</link>
+        <image>http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/Knives.jpg</image>
+        <Brand>
+            <![CDATA[Sweetheart]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count>1000</Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>389</entity_id>
+        <CategoryName>
+            <![CDATA[Tissues]]>
+        </CategoryName>
+        <sku>196</sku>
+        <name>
+            <![CDATA[Surpass Facial Tissue 30 Boxes]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Surpass Facial Tissue 30 Boxes are a great deal when supplying your home, office, or business with essential supplies like Surpass Tissues.]]>
+        </shortdesc>
+        <price>53.9500</price>
+        <link>http://www.coffeeforless.com/surpass-facial-tissue-30-boxes.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/coffeepods/surpass-facial-tissue-30-boxes.jpg</image>
+        <Brand>
+            <![CDATA[Surpass]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count>30</Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>393</entity_id>
+        <CategoryName>
+            <![CDATA[Bunn Coffee Machines]]>
+        </CategoryName>
+        <sku>382</sku>
+        <name>
+            <![CDATA[Bunn A10A 10-Cup Automatic or Pourover Coffee Brewer]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[The Bunn A10A 10-Cup Automatic or Pourover Coffee Brewer coffee machine provides the utility you expect from pourover coffee brewer by Bunn Coffee Machines.]]>
+        </shortdesc>
+        <price>400.0000</price>
+        <link>http://www.coffeeforless.com/bunn-a10a-10-cup-automatic-or-pourover-coffee-brewer.html</link>
+        <image>http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/main/bunna10.gif</image>
+        <Brand>
+            <![CDATA[Bunn]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count></Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>No</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>394</entity_id>
+        <CategoryName>
+            <![CDATA[Bunn Coffee Machines]]>
+        </CategoryName>
+        <sku>359</sku>
+        <name>
+            <![CDATA[Bunn RL 12 Cup BUNN Pour-Omatic Coffee Brewer with 5 Warmers]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[The Bunn RL 12 Cup BUNN Pour-Omatic Coffee Brewer with 5 Warmers coffee machine has the utility you expect from pourover coffee brewer by Bunn Coffee Machines.]]>
+        </shortdesc>
+        <price>1150.0000</price>
+        <link>
+            http://www.coffeeforless.com/bunn-rl-12-cup-bunn-pour-omatic-coffee-brewer-5-warmers.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/uploads/main/bunn5potsteel.gif</image>
+        <Brand>
+            <![CDATA[Bunn]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType></CaffeineType>
+        <Count></Count>
+        <Flavored></Flavored>
+        <Seasonal></Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>396</entity_id>
+        <CategoryName>
+            <![CDATA[Bigelow Tea]]>
+        </CategoryName>
+        <sku>150</sku>
+        <name>
+            <![CDATA[Bigelow's Raspberry Royale Tea 28ct]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Bigelow's Raspberry Royale Tea 28ct box allow you to make 28 individual servings of sweet berry fruit tea when you serve Bigelow Tea.]]>
+        </shortdesc>
+        <price>5.9500</price>
+        <link>http://www.coffeeforless.com/bigelows-raspberry-royale-tea-28ct.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/coffeepods/bigelows-raspberry-royale-tea-28ct.jpg</image>
+        <Brand>
+            <![CDATA[Bigelow]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>No</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>397</entity_id>
+        <CategoryName>
+            <![CDATA[Flavored Coffee Beans]]>
+        </CategoryName>
+        <sku>06-1655</sku>
+        <name>
+            <![CDATA[Barrie House Chocolate Raspberry Cream Coffee Beans 3 5lb Bags]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Barrie House Chocolate Raspberry Cream Coffee Beans 3 5lb Bags bulk quantity makes many pots of distinctly fresh berry flavored coffee from Barrie House Coffee Beans.]]>
+        </shortdesc>
+        <price>129.9900</price>
+        <link>
+            http://www.coffeeforless.com/barrie-house-chocolate-raspberry-cream-coffee-beans-3-5lb-bags.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//b/a/barrie-house-chocolate-raspberry-cream-coffee-beans-3-5lb-bags.jpg</image>
+        <Brand>
+            <![CDATA[Barrie House]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>No</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>399</entity_id>
+        <CategoryName>
+            <![CDATA[Green Mountain K-Cup&reg; Coffee]]>
+        </CategoryName>
+        <sku>6694C</sku>
+        <name>
+            <![CDATA[Green Mountain Coffee French Roast K-Cup&reg; Coffee 96ct Dark]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Green Mountain Coffee French Roast K-Cup&amp;reg; Pods 96ct Dark case makes 96 individual servings of full-roasted, smoky dark roast coffee from Green Mountain K-Cup&amp;reg; Pods.]]>
+        </shortdesc>
+        <price>59.9600</price>
+        <link>http://www.coffeeforless.com/green-mountain-coffee-french-roast-k-cups-96ct-dark.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//g/r/green-mountain-coffee-french-roast-k-cups-96ct-dark-914.jpg</image>
+        <Brand>
+            <![CDATA[Green Mountain Coffee]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count>96</Count>
+        <Flavored>No</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>0</Facebook>
+        <IsKCup>1</IsKCup>
+    </item>
+    <item>
+        <entity_id>403</entity_id>
+        <CategoryName>
+            <![CDATA[Bigelow Tea]]>
+        </CategoryName>
+        <sku>156</sku>
+        <name>
+            <![CDATA[Bigelow's Cranberry Apple Herbal Caffeine Free Tea 28ct]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Bigelow's Cranberry Apple Herbal Caffeine Free Tea 28ct box allow you to make 28 individual servings of fruity herbal tea when you serve Bigelow Tea.]]>
+        </shortdesc>
+        <price>5.9500</price>
+        <link>
+            http://www.coffeeforless.com/bigelows-cranberry-apple-herbal-caffeine-free-tea-28ct.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//b/i/bigelow-cranberry-apple-tea-bags.png</image>
+        <Brand>
+            <![CDATA[Bigelow]]>
+        </Brand>
+        <Rating>5</Rating>
+        <CaffeineType>Caffeine Free</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>404</entity_id>
+        <CategoryName>
+            <![CDATA[Bigelow Tea]]>
+        </CategoryName>
+        <sku>166</sku>
+        <name>
+            <![CDATA[Bigelow's Constant Comment Decaf Tea 20ct]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Bigelow's Constant Comment Decaf Tea 20ct box allow you to prepare 20 single cups of flavorful, complicated blended tea when you make Bigelow Tea.]]>
+        </shortdesc>
+        <price>5.9500</price>
+        <link>http://www.coffeeforless.com/bigelows-constant-comment-decaf-tea-20ct.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product//b/i/bigelow-constant-comment-decaf-tea-bags.jpg</image>
+        <Brand>
+            <![CDATA[Bigelow]]>
+        </Brand>
+        <Rating>0</Rating>
+        <CaffeineType>Decaffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>Yes</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>No</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+    <item>
+        <entity_id>407</entity_id>
+        <CategoryName>
+            <![CDATA[Bigelow Tea]]>
+        </CategoryName>
+        <sku>153</sku>
+        <name>
+            <![CDATA[Bigelow's Darjeeling Tea 28ct]]>
+        </name>
+        <description></description>
+        <shortdesc>
+            <![CDATA[Bigelow's Darjeeling Tea 28ct box allow you to make 28 individual servings of spiced, sweet black tea when you serve Bigelow Tea.]]>
+        </shortdesc>
+        <price>5.9500</price>
+        <link>http://www.coffeeforless.com/bigelow-s-darjeeling-tea-28ct.html</link>
+        <image>
+            http://mcdn.coffeeforless.com/media/catalog/product/images/coffeepods/bigelows-darjeeling-tea-28ct.jpg</image>
+        <Brand>
+            <![CDATA[Bigelow]]>
+        </Brand>
+        <Rating>4</Rating>
+        <CaffeineType>Caffeinated</CaffeineType>
+        <Count></Count>
+        <Flavored>No</Flavored>
+        <Seasonal>No</Seasonal>
+        <Instock>Yes</Instock>
+        <Facebook>1</Facebook>
+        <IsKCup>0</IsKCup>
+    </item>
+</catalog>

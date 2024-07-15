@@ -1,2 +1,2 @@
-CREATE TABLE IF NOT EXISTS objects ( uuid CHAR(8) PRIMARY KEY ,object varchar(1000)) ;
-CREATE TABLE IF NOT EXISTS object ( uuid CHAR(8) PRIMARY KEY ,id varchar(1000), title varchar(1000), body varchar(1000), views varchar(1000), likes varchar(1000), author_id varchar(1000), created_at varchar(1000), updated_at varchar(1000)) ;
+CREATE TABLE IF NOT EXISTS catalog ( uuid CHAR(8) PRIMARY KEY ,item varchar(500)) ;
+CREATE TABLE IF NOT EXISTS item ( uuid CHAR(8) PRIMARY KEY ,entity_id varchar(500), CategoryName varchar(500), sku varchar(500), name varchar(500), description varchar(500), shortdesc varchar(500), price varchar(500), link varchar(500), image varchar(500), Brand varchar(500), Rating varchar(500), CaffeineType varchar(500), Count varchar(500), Flavored varchar(500), Seasonal varchar(500), Instock varchar(500), Facebook varchar(500), IsKCup varchar(500)) ;
