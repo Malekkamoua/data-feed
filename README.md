@@ -26,11 +26,10 @@ php artisan app:process-data
 ## Command Functionality
 ### Output Options:
 
-Saved in database directly: Saves XML data into the configured database.
-Simply generate database scripts (create - insert): Generates SQL scripts based on XML data for manual execution.
+- Saved XML data into the configured database.
+- simply generate database scripts (create - insert)
 
-### Database Configuration:
-#### If saving data directly:
+### Database Configuration (in case the user chose saving data directly into database) :
 - Prompts for database credentials (MySQL or SQLite).
 - Updates .env file with provided credentials.
 - Generates database migration files.
