@@ -1,66 +1,68 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Process Data Command
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This Laravel Artisan command (`app:process-data`) is designed to process XML data from either a local file or an API endpoint. Depending on the user's choice, it can either save the data directly into a database or generate SQL scripts for manual execution.
 
-## About Laravel
+## Installation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. Clone the repository:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    ```bash
+    git clone https://github.com/Malekkamoua/kaufland-data-feed
+    ```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2. Install dependencies:
 
-## Learning Laravel
+    ```bash
+    composer install
+    ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Usage
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Command Signature
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+php artisan app:process-data
 
-## Laravel Sponsors
+Functionality
+1. Output Options:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Saved in database directly: Saves XML data into the configured database.
+Simply generate database scripts (create - insert): Generates SQL scripts based on XML data for manual execution.
 
-### Premium Partners
+2.Database Configuration:
+*If saving data directly:
+- Prompts for database credentials (MySQL or SQLite).
+- Updates .env file with provided credentials.
+- Generates database migration files.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+3. Data Source:
 
-## Contributing
+*disk: Reads XML data from a local file.
+-Prompts for the complete path to the XML file.
+-Validates and processes XML data.
+*API: Fetches XML data from an API endpoint.
+-Prompts for the API URL.
+-Fetches XML data using Guzzle HTTP client.
+-Validates and processes XML data.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. Generated Files:
+* SQL scripts are stored in the storage/app/public/sql_files/ directory.
+* Scripts are named based on the XML data structure.
 
-## Code of Conduct
+Requirements
+- PHP >= 7.2
+- Composer
+- Laravel >= 5.8
+- Guzzle HTTP client (for API data retrieval)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Example
+Assume you have a local XML file located at storage/data/feed-small.xml and you want to save its data into a MySQL database:
 
-## Security Vulnerabilities
+```bash
+php artisan app:process-data
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Follow the prompts to configure the database and specify the data source as disk, providing the path to your XML file.
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Notes
+- Ensure proper file permissions for the storage/app/public/sql_files/ directory.
+- Handle sensitive database credentials securely, especially in production environments.
