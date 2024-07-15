@@ -1,6 +1,6 @@
 # Process Data Command
 
-This Laravel Artisan command (`app:process-data`) is designed to process XML data from either a local file or an API endpoint. Depending on the user's choice, it can either save the data directly into a database or generate SQL scripts for manual execution.
+This Laravel Artisan command (`app:process`) is designed to process XML data from either a local file or an API endpoint. Depending on the user's choice, it can either save the data directly into a database or generate SQL scripts for manual execution.
 
 ## Installation
 
@@ -21,7 +21,7 @@ This Laravel Artisan command (`app:process-data`) is designed to process XML dat
 ### Command Signature
 
 ```bash
-php artisan app:process-data
+php artisan app:process
    ```
 ## Command Functionality
 ### Output Options:
@@ -60,7 +60,7 @@ php artisan app:process-data
 Assume you have a local XML file located at storage/data/feed-small.xml and you want to save its data into a MySQL database:
 
 ```bash
-php artisan app:process-data
+php artisan app:process
 ```
 Follow the prompts to configure the database and specify the data source as disk, providing the path to your XML file.
 If you chose the API option, you'll be prompt to provide the adequate link to your XML data.
