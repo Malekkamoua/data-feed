@@ -30,20 +30,22 @@ Saved in database directly: Saves XML data into the configured database.
 Simply generate database scripts (create - insert): Generates SQL scripts based on XML data for manual execution.
 
 ### Database Configuration:
-*If saving data directly:
+#### If saving data directly:
 - Prompts for database credentials (MySQL or SQLite).
 - Updates .env file with provided credentials.
 - Generates database migration files.
 
 ### Data Source:
 
-*disk: Reads XML data from a local file.
--Prompts for the complete path to the XML file.
--Validates and processes XML data.
-*API: Fetches XML data from an API endpoint.
--Prompts for the API URL.
--Fetches XML data using Guzzle HTTP client.
--Validates and processes XML data.
+#### disk: 
+- Reads XML data from a local file.
+- Prompts for the complete path to the XML file.
+- Validates and processes XML data.
+#### API: 
+- Fetches XML data from an API endpoint.
+- Prompts for the API URL.
+- Fetches XML data using Guzzle HTTP client.
+- Validates and processes XML data.
 
 ### Generated Files:
 * SQL scripts are stored in the storage/app/public/sql_files/ directory.
