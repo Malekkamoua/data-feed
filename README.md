@@ -22,20 +22,20 @@ This Laravel Artisan command (`app:process-data`) is designed to process XML dat
 
 ```bash
 php artisan app:process-data
-
-Functionality
-1. Output Options:
+   ```
+## Command Functionality
+### Output Options:
 
 Saved in database directly: Saves XML data into the configured database.
 Simply generate database scripts (create - insert): Generates SQL scripts based on XML data for manual execution.
 
-2.Database Configuration:
+### Database Configuration:
 *If saving data directly:
 - Prompts for database credentials (MySQL or SQLite).
 - Updates .env file with provided credentials.
 - Generates database migration files.
 
-3. Data Source:
+### Data Source:
 
 *disk: Reads XML data from a local file.
 -Prompts for the complete path to the XML file.
@@ -45,24 +45,24 @@ Simply generate database scripts (create - insert): Generates SQL scripts based 
 -Fetches XML data using Guzzle HTTP client.
 -Validates and processes XML data.
 
-4. Generated Files:
+### Generated Files:
 * SQL scripts are stored in the storage/app/public/sql_files/ directory.
 * Scripts are named based on the XML data structure.
 
-Requirements
+### Requirements
 - PHP >= 7.2
 - Composer
 - Laravel >= 5.8
 - Guzzle HTTP client (for API data retrieval)
 
-# Example
+### Example
 Assume you have a local XML file located at storage/data/feed-small.xml and you want to save its data into a MySQL database:
 
 ```bash
 php artisan app:process-data
-
+```
 Follow the prompts to configure the database and specify the data source as disk, providing the path to your XML file.
 
-Notes
+### Notes
 - Ensure proper file permissions for the storage/app/public/sql_files/ directory.
 - Handle sensitive database credentials securely, especially in production environments.
