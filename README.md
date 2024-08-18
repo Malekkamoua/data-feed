@@ -7,7 +7,7 @@ This Laravel Artisan command (`app:process`) is designed to process XML data fro
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Malekkamoua/kaufland-data-feed
+    git clone https://github.com/Malekkamoua/data-feed
     ```
 
 2. Install dependencies:
